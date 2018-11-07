@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <%= link_to('New Restaurant', new_restaurant_path) %>
+    </div>
+    <div class="col-xs-4">
+      <h1>Restaurants:</h1>
+      <ul>
+        <%@restaurants.each do |restaurant| %>
+          <ul>
+          <li>name: <%=restaurant.name%></li>
+          <li>address: <%=restaurant.address%></li>
+          <li>phone: <%=restaurant.phone%></li>
+          <li>category: <%=restaurant.category%></li>
+          <li><%= link_to("More infos", restaurant_path(restaurant)) %></li>
+          </ul>
+          <br>
+          <br>
+
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</div>

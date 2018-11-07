@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <%= link_to("Back", restaurants_path) %>
+    </div>
+    <div class="col-xs-4">
+      <%= simple_form_for @restaurant do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone %>
+        <%= f.input :category %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
